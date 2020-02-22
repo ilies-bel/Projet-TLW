@@ -44,9 +44,16 @@
   font-size: 30px;
   max-height: 700px;
   height:700px;
+  overflow: hidden;
 }
 
 .grid-item img {
 	height: 100%;
-	width: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
   }
+
+  .grid-item img:hover {
+	transform: scale(1.15);
+}

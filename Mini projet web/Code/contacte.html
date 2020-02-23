@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="CSS/main.css">
+  <title>Contacte</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <form onSubmit="sendMail()">
+      <h1>Vosu avez des questions ? Contactez nous !</h1>
+      <div class="form-group">
+        <input required="required" type="text" id="mail_nom" />
+        <label for="input" class="control-label">Votre Nom</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <input required="required" type="text" id="mail_sujet" />
+        <label for="input" class="control-label">Objet</label><i class="bar"></i>
+      </div>
+      <div class="form-group">
+        <textarea required="required" id="mail_texte"></textarea>
+        <label for="textarea" class="control-label">Message</label><i class="bar"></i>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="button"><span>Envoyer</span></button>
+
+        <button type="reset" class="button"><span>Recommencer</span></button>
+      </div>
+    </form>
+
+  </div>
+
+  <script src="JS/main.js">
+  </script>
+
+</body>
+
+
+
+
+
+</html>
+
+
+
+</html>

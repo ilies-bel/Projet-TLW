@@ -1,32 +1,55 @@
 /*style de la bar de navigation ----------------------------------------------------------------------------------------------------*/
+.home {
+text-align: center;
+margin-top: 20rem ;
+margin-bottom: 20rem ;
+}
+
+
+
+
+.grid-item .top-right {
+  position: absolute; 
+  top: 12px; 
+  left: 5px; 
+  color: white; 
+  font: bold 24px/45px Helvetica, Sans-Serif; 
+  letter-spacing: -1px;  
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px; 
+
+}
+
 
 
 /* Add a black background color to the top navigation */
 .topnav {
-	background-color: #333;
-	overflow: hidden;
+  text-align: center;
+ /* background-color: #333;
+  background-color: #fff;
+  */  
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
-	float: left;
-	display: block;
-	color: #f2f2f2;
+	
+	color: #284780;
 	text-align: center;
-	padding: 14px 16px;
+  padding: 12px 14px;
+  display: inline-block;
 	text-decoration: none;
 	font-size: 17px;
   }
   
   /* Change the color of links on hover */
   .topnav a:hover {
-	background-color: #ddd;
-	color: black;
+  font-weight: bold;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-	background-color: #4CAF50;
+	background-color: rgb(143, 214, 145);
 	color: white;
   }
   
@@ -35,21 +58,112 @@
 	display: none;
   }
 
+.menu {
+  display: inline-block;
+  color: #337ab7;
+  }
+
+.logo {
+  font-size: 40px;
+  color: red;
+  margin-left: 10px;
+  text-align: left;
+  }
+
+.sticky {
+  top: 0px;
+  position: fixed;
+  
+}
+
+.contenu {
+  background-image: url('../Ressources/img-entete1.jpg');
+  background-repeat: round;
+  background-attachment: fixed;
+  height: 130em;
+
+  
+}
+
+.contenu1 {
+  background-image: url('../Ressources/img-entete1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 5000px 5000px;
+  height: auto;
+
+}
+
+
+.ancre
+{
+position: fixed;
+right: -50px;
+bottom:  15%;
+opacity: 0.85;
+}
+
+.ancre:hover{
+  transform: scale(1.5);
+}
+
+/*style du footer ----------------------------------------------------------------------------------------------------*/
+
+.backgroundfooter {
+  background: #172b49;
+  width: 95%;
+  left: 2.5%;
+  bottom: 0%;
+}
+
+.backgroundfooter-inner {
+padding-top: 80px;
+padding-bottom: 50px;
+}
+
+.footertop{
+  position: static;
+}
+
+.footerbottom{
+  background: #5a7caf;
+  position: static;
+  bottom: 0%;
+
+}
+
+
 
   /*Affichage des images de presentation ----------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+  .grid-container {
+     display: block !important;
+
+  }
+
+}
+
+  
 .grid-container {
   display: grid;
-  background-color: rgb(41, 30, 192);
   grid-template-columns: auto auto auto;
+  overflow: hidden;
+  bottom: 0%;
+  position: relative;
+  color: white;
 }
+  
+
+
 
 .grid-item {
   background-color: rgba(255, 255, 255, 0.8);
   text-align: center;
   font-size: 30px;
-  
-  height: 55rem;
   overflow: hidden;
+  height: 35rem;
+  
 }
 
 .grid-item img {
@@ -93,6 +207,7 @@ body {
 
 h1 {
   font-size: 2rem;
+  font-weight: lighter;
   text-align: center;
   margin: 0 0 2em;
 }

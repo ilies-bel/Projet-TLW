@@ -1,112 +1,156 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-  <link rel="stylesheet" href="CSS/main.css">
+    <title>DestiNeo</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <meta name="Accueil" content="Page d'Accueil, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
+
 <body>
-  <div class="container">
-    <form onSubmit="verificateur()">
-      <h1>Reservez dès maintnenant !</h1>
 
-      <div id="totalPrice">Obtenez un devis instantanés !</div>
+    <header class="background-image">
 
-      <div class="form-inline ">
+        <div class="layer">
 
-        <div class="form-group">
-          <input required="required" type="text" id="res_nom">
-          <label for="input" class="control-label">Nom</label><i class="bar"></i>
+            <div class="topnav" id="myTopnav">
+                <!--<span id="logo" class="logo"></span>-->
+                <span id="contenuMenu" class="menu ">
+                    <a href="Accueil.html" id="1a">Accueil</a>
+                    <a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a>
+                    <a href="contacte.html" id="3a" onclick="">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i> </a>
+                </span>
+            </div>
+
+
+
+            <div class="homepage-title">
+                <h1>Découvrez le Monde</h1>
+                <h1>Découvrez-vous</h1>
+            </div>
 
         </div>
-        <div class="form-group pull-right ">
-          <input required="required" type="text" id="res_prenom" />
-          <label for="input" class="control-label">Prenom</label><i class="bar"></i>
+    </header>
 
-        </div>
-
-      </div>
-
-
-
-      <div class="form-group">
-        <input required="required" type="email" id="res_email" />
-        <label for="input" class="control-label">Email</label><i class="bar"></i>
-      </div>
-
-      <div class="form-group pull">
-        <input type="tel" id="res_tel" />
-        <label for="input" class="control-label">numéro de téléphone</label><i class="bar"></i>
-      </div>
-
-
-      <div class="form-inline" id="participants">
-
-      <div class="form-group">
-        <input required="required" type="number" id="res_nbAdulte" min="0"  oninput="calculateTotal()"/>
-        <label for="input" class="control-label">Nombre d'adultes</label><i class="bar"></i>
-      </div>
-
-      <div class="form-group pull-right">
-        <input required="required" type="number" id="res_nbEnfant" name="res_nbEnfant" min="0"  oninput="calculateTotal()"/>
-        <label for="input" class="control-label">Nombre d'enfants (-12 ans)</label><i class="bar"></i>
-      </div>
-
-      </div>
-
-
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="res_dejeuner" onclick="calculateTotal()"/><i class="helper" ></i>Petit déjeuné
-        </label>
-      </div>
-
-      <div class="checkbox">
-        <label>
-          <input type="checkbox" id="res_animaux" /><i class="helper"></i>Animaux
-        </label>
-      </div>
-
-      <div class="form-inline" id="dates">
-        
-        <div class="form-group pull-right" >
-          <input required="required" type="date" id="res_arrive"  onchange="calculateTotal();" />
-          <label for="input" class="control-label">date arrivé</label><i class="bar"></i>
-        </div>
-        
-        <div class="form-group" >
-          <input required="required" type="date" id="res_depart" onchange="calculateTotal();"/>
-          <label for="input" class="control-label">Date de départ</label><i class="bar"></i>
-        </div>
-  
-        
+    <div class="container">
+        <form onSubmit="verificateur()">
+          <h1>Reservez dès maintnenant !</h1>
     
+          <div id="totalPrice">Obtenez un devis instantanés !</div>
+    
+          <div class="form-inline ">
+    
+            <div class="form-group">
+              <input required="required" type="text" id="res_nom">
+              <label for="input" class="control-label">Nom</label><i class="bar"></i>
+    
+            </div>
+            <div class="form-group pull-right ">
+              <input required="required" type="text" id="res_prenom" />
+              <label for="input" class="control-label">Prenom</label><i class="bar"></i>
+    
+            </div>
+    
+          </div>
+    
+    
+    
+          <div class="form-group">
+            <input required="required" type="email" id="res_email" />
+            <label for="input" class="control-label">Email</label><i class="bar"></i>
+          </div>
+    
+          <div class="form-group pull">
+            <input type="tel" id="res_tel" />
+            <label for="input" class="control-label">numéro de téléphone</label><i class="bar"></i>
+          </div>
+    
+    
+          <div class="form-inline" id="participants">
+    
+          <div class="form-group">
+            <input required="required" type="number" id="res_nbAdulte" min="0"  oninput="calculateTotal()"/>
+            <label for="input" class="control-label">Nombre d'adultes</label><i class="bar"></i>
+          </div>
+    
+          <div class="form-group pull-right">
+            <input required="required" type="number" id="res_nbEnfant" name="res_nbEnfant" min="0"  oninput="calculateTotal()"/>
+            <label for="input" class="control-label">Nombre d'enfants (-12 ans)</label><i class="bar"></i>
+          </div>
+    
+          </div>
+    
+    
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="res_dejeuner" onclick="calculateTotal()"/><i class="helper" ></i>Petit déjeuné
+            </label>
+          </div>
+    
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" id="res_animaux" /><i class="helper"></i>Animaux
+            </label>
+          </div>
+    
+          <div class="form-inline" id="dates">
+            
+            <div class="form-group pull-right" >
+              <input required="required" type="date" id="res_arrive"  onchange="calculateTotal();" />
+              <label for="input" class="control-label">date arrivé</label><i class="bar"></i>
+            </div>
+            
+            <div class="form-group" >
+              <input required="required" type="date" id="res_depart" onchange="calculateTotal();"/>
+              <label for="input" class="control-label">Date de départ</label><i class="bar"></i>
+            </div>
+         
         </div>
-
-
-      <div class="form-group">
-        <textarea id="res_renseignements" id="res_commentaire"></textarea>
-        <label for="textarea" class="control-label">Commentaires et demande de renseignements</label><i class="bar"></i>
+    
+    
+          <div class="form-group">
+            <textarea id="res_renseignements" id="res_commentaire"></textarea>
+            <label for="textarea" class="control-label">Commentaires et demande de renseignements</label><i class="bar"></i>
+          </div>
+        
+          <div class="button-container form-inline">
+            <button type="submit" class="button"><span>Continuer</span></button>
+    
+            <button type="reset" class="button"><span>Recommencer</span></button>
+          </div>
+        </form>
+    
       </div>
 
-      
+    <div class="backgroundfooter">
+        <h4 class=""><small>Liens rapides</small></h4>
+        <ul class="">
+            <li><a href="#"> Accueil </a></li>
+            <li><a href="#"> Contacte </a></li>
+            <li><a href="#"> Services </a></li>
+            <li><a href="#"> Projects </a></li>
+            <li><a href="#"> Portfolio </a></li>
+        </ul>
+        <div class="footerbottom">
+            <p>Copyright Company 2020. All right reserved<br>DestiNeo</p>
+        </div>
+    </div>
 
 
+    <div id="ancre" class="ancre" onclick="ancreFct()">
+        <a href="#haut">
+            <img src="Ressources/top.png" />
+        </a>
+    </div>
 
-      <div class="button-container form-inline">
-        <button type="submit" class="button"><span>Continuer</span></button>
+    <!--fin div contenu-->
 
-        <button type="reset" class="button"><span>Recommencer</span></button>
-      </div>
-    </form>
-
-  </div>
-
-
-
-
-  <script src="JS/main.js">
-  </script>
-
+    <script src="JS/main.js"></script>
+</body>
 
 </html>

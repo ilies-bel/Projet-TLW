@@ -109,6 +109,33 @@ function ancreFct() {
 	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+function fctTransfert(x){
+	var id = x.id;
+	switch(id){
+		case "A1":
+			window.location.href = "Reservation.html"+"?test=valeur1";
+		break;
+		case "A2":
+			window.location.href = "Reservation.html"+"?test=valeur2";
+		break;
+		case "A3":
+			window.location.href = "Reservation.html"+"?test=valeur3";
+		break;
+		case "A4":
+			window.location.href = "Reservation.html"+"?test=valeur4";
+		break;
+		case "A5":
+			window.location.href = "Reservation.html"+"?test=valeur5";
+		break;
+		case "A6":
+			window.location.href = "Reservation.html"+"?test=valeur6";
+		break;
+		default:
+			break;
+	}
+	
+}
+
 
 
 //-------------------------------------------------------------------------------------------calcule dynamique du prix

@@ -3,8 +3,13 @@ margin-top: 1rem;
 margin-bottom: 1rem;
 padding: 3rem;
 width: 100%;
-background-color: white;
 text-align: center;
+background-image: url('../Ressources/img3.jpg') ;
+background-repeat: no-repeat;
+background-attachment: fixed;
+top: 0rem;
+color: white;
+
 }
 
 .wrapper .h1 {
@@ -129,6 +134,8 @@ opacity: 0.85;
   background: #172b49;
   width: 100%;
   bottom: 0%;
+  color: white;
+  font-weight: lighter;
 }
 
 .backgroundfooter-inner {
@@ -144,6 +151,13 @@ padding-bottom: 50px;
 
 }
 
+.ongletfooter{
+  color: rgb(255, 255, 255);
+  font-weight: lighter;
+  font-size: 1rem;
+  
+
+}
 
 
   /*Affichage des images de presentation ----------------------------------------------------------------------------------------------------*/
@@ -221,6 +235,17 @@ padding-bottom: 50px;
 /*css des différents formulaires ----------------------------------------------------------------------------------------------------*/
 
 
+
+/*css formulaire contact ----------------------------------------------------------------------------------------------------*/
+.formcontact{
+  display: block;
+  position: absolute;
+
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
 body,
 input,
 select,
@@ -248,6 +273,19 @@ body {
 
 h1 {
   font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0 0 2em;
+  color: #000000;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: lighter;
+  text-align: center;
+  margin: 0 0 2em;
+}
+h3 {
+  font-size: 1.75rem;
   font-weight: lighter;
   text-align: center;
   margin: 0 0 2em;

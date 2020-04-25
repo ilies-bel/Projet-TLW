@@ -56,11 +56,6 @@ function sendMail() {
 
 
 
-
-
-
-
-
 //fonction de mise en place de l'ancre de retour en haut de page
 jQuery(function(){
 	$(function () {
@@ -254,6 +249,14 @@ function calculateTotal() {
 	document.getElementById('totalPrice').innerHTML = total;
 	totalEl.style.display = 'block';
 }
+
+
+function verificateur(){
+	window.location.href = "Recapitulatif.html";
+}
+
+
+
 
 
 

@@ -111,6 +111,10 @@ color: white;
   background-size: cover;
 }
 
+.container{
+top:auto;
+}
+
 .layer {
   background-color: rgba(0,0,0, 0.5 );
     position: absolute ;

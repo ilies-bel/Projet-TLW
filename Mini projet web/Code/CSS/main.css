@@ -98,14 +98,17 @@ color: white;
   background-size: cover;
 
 }
-.container{
+
+.midpage{
   background-image: url('../Ressources/img4.jpg') ;
   position: relative;
+  margin-top: 0% ;
+  top: 0%;
+  height: auto;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 .layer {

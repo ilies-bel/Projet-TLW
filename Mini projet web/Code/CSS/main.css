@@ -98,6 +98,15 @@ color: white;
   background-size: cover;
 
 }
+.container{
+  background-image: url('../Ressources/img4.jpg') ;
+  position: relative;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
 
 .layer {
   background-color: rgba(0,0,0, 0.5 );
@@ -129,34 +138,62 @@ opacity: 0.85;
 }
 
 /*style du footer ----------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+.footer-wrapper {
+    color: rgb(255, 255, 255);
+    margin-bottom: 0%;
+    padding: 30px 15px;
+    text-align: center;
+    
+}
+.social-icons-wrapper {
+  padding: 1px;
+}
+.social-icons-wrapper .social-footer-icon {
+  height: 22px;
+  width: 22px;
+  margin: 0 15px;
+  display: inline-block;
+}
+.links {
+  margin: 35px 0;
+}
+.copyrights {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-top: 1rem;
+}
 
-.backgroundfooter {
-  background: #172b49;
+.social-footer-facebook {
+  height: 100%;
   width: 100%;
-  bottom: 0%;
-  color: white;
-  font-weight: lighter;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn1.voyagesdetective.fr/Facebook-2x_1.png);
+}
+.social-footer-instagram {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn1.voyagesdetective.fr/Instagram-2x_1.png);
+}
+.social-footer-pinterest {
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://cdn1.voyagesdetective.fr/pinterest_1.png);
 }
 
-.backgroundfooter-inner {
-padding-top: 80px;
-padding-bottom: 50px;
-}
-
-
-.footerbottom{
-  background: #5a7caf;
-  position: static;
-  bottom: 0%;
-
-}
-
-.ongletfooter{
-  color: rgb(255, 255, 255);
-  font-weight: lighter;
-  font-size: 1rem;
-  
-
+.foot{
+  margin-top: 10px;
+  margin-bottom: 0%;
+  background-color: rgb(36, 34, 34);
 }
 
 

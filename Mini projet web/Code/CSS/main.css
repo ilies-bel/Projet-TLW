@@ -89,6 +89,7 @@ color: white;
   position: fixed;
   background-color: #333;
   width: 100% ;
+  margin-right: 2%;
   z-index : 99 ;
   
 }
@@ -155,7 +156,7 @@ opacity: 0.85;
 .footer-wrapper {
     color: rgb(255, 255, 255);
     margin-bottom: 0%;
-    padding: 30px 15px;
+    padding: 150px 15px 60px;
     text-align: center;
     
 }

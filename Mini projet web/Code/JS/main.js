@@ -1,3 +1,26 @@
+//--------------------------------------------------------Builder de page pour afficher le header et footer automatiquement
+
+function buildPage() {
+	var header = '<div class="background-image"><div class="layer"><div class="topnav" id="myTopnav"><!--<span id="logo" class="logo"></span>--><span id="contenuMenu" class="menu "><a href="Accueil.html" id="1a">Accueil</a><a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a><a href="contact.html" id="3a" onclick="">Contact</a><a href="javascript:void(0);"class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a></span></div><div class="homepage-title"><h1>Découvrez le Monde</h1><h1>Découvrez-vous</h1></div></div></div>' ;
+	var footer = '<div class="foot"><div class="footer-wrapper"><div class="social-icons-wrapper"><div class="social-footer-icon"><a href="https://www.facebook.com/" target="_blank"><span class="social-footer-facebook"></span></a></div><div class="social-footer-icon"><a href="https://www.instagram.com/" target="_blank"><span class="social-footer-instagram"></span></a></div><div class="social-footer-icon"><a href="https://www.pinterest.com/" target="_blank"><span class="social-footer-pinterest"></span></a></div></div><div class="links"><p class="footerLink"><a href="Accueil.html">Accueil</a></p><p class="footerLink"><a href="contact.html">Contactez-nous</a></p><p class="footerLink"><a href="QuiSommesNous.html">A propos</a></p><p class="footerLink"><a href="politique-de-confidentialite">Politique de confidentialité</a></p></div><div class="copyrights"><span>DestiNeo © 2020</span><br><span>Tous droits réservés</span></div></div></div>' ;
+	var ancre = ' <div id="ancre" class="ancre" onclick="scrollToTop(500)"><a href="#haut"><img src="Ressources/top.png" /></a></div>'
+
+	$("#header").append(header);
+	$("#footer").append(footer);
+
+	document.getElementById("buildAncre").innerHTML = ancre ;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon 
@@ -41,7 +64,7 @@ function myFunction() {
 
 
 
-//fonction d'envoie de mail dans la page contacte
+//fonction d'envoie de mail dans la page contact
 function sendMail() {
 	var input = document.getElementById('mail_texte');
 	texte = input.value;
@@ -80,14 +103,16 @@ function contact(){
 var onglet = document.querySelector("meta").getAttribute("name");
 window.onload = function(){
 
+	this.buildPage();
+
 	switch (this.onglet){
 		case "Accueil":
 			document.getElementById("1a").classList.add("active");
 			break;
 		case "QuiSommesNous":
 			document.getElementById("2a").classList.add("active");
-			this.document.getElementById("plan").classList.remove("contenu");
-			this.document.getElementById("plan").classList.add("contenu1");
+			//this.document.getElementById("plan").classList.remove("contenu");
+			//this.document.getElementById("plan").classList.add("contenu1");
 			break;
 		case "Contact":
 			document.getElementById("3a").classList.add("active");
@@ -136,6 +161,16 @@ function fctTransfert(x){
 	}
 	
 }
+
+//--------------------------------------------------------------------------- Fonction de transfert du formulaire a la page récapitulatif
+
+
+function recapitulatif(){
+
+	window.location.href = "Contact.html";
+
+}
+
 
 
 
@@ -257,59 +292,3 @@ function verificateur(){
 */
 
 
-
-
-
-//----------------------------------------------------------------------------------Validation formulaire de contact
-
-
-
-function validateForm()                                    
-{ 
-var name = document.forms["myForm"]["name"];               
-var email = document.forms["myForm"]["email"];    
-var message = document.forms["myForm"]["message"];   
-
-if (name.value == "")                                  
-{ 
-	document.getElementById('errorname').innerHTML="Veuillez entrez un nom valide";  
-	name.focus(); 
-	return false; 
-}else{
-	document.getElementById('errorname').innerHTML="";  
-}
-   
-if (email.value == "")                                   
-{ 
-	document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-	email.focus(); 
-	return false; 
-}else{
-	document.getElementById('erroremail').innerHTML="";  
-}
-
-if (email.value.indexOf("@", 0) < 0)                 
-{ 
-	document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-	email.focus(); 
-	return false; 
-} 
-
-if (email.value.indexOf(".", 0) < 0)                 
-{ 
-	document.getElementById('erroremail').innerHTML="Veuillez entrez une adresse mail valide"; 
-	email.focus(); 
-	return false; 
-} 
-
-if (message.value == "")                           
-{
-	document.getElementById('errormsg').innerHTML="Veuillez entrez un message valide"; 
-	message.focus(); 
-	return false; 
-}else{
-	document.getElementById('errormsg').innerHTML="";  
-}
-
-return true; 
-}

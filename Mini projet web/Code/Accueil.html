@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html >
 
 <head>
     <title>DestiNeo</title>
@@ -10,31 +10,10 @@
 </head>
 
 
-<body>
+<body >
 
-    <header class="background-image">
+    <header id="header">
 
-        <div class="layer">
-
-            <div class="topnav" id="myTopnav">
-                <!--<span id="logo" class="logo"></span>-->
-                <span id="contenuMenu" class="menu ">
-                    <a href="Accueil.html" id="1a">Accueil</a>
-                    <a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a>
-                    <a href="contacte.html" id="3a" onclick="">Contact</a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i> </a>
-                </span>
-            </div>
-
-
-
-            <div class="homepage-title">
-                <h1>Découvrez le Monde</h1>
-                <h1>Découvrez-vous</h1>
-            </div>
-
-        </div>
     </header>
 
 
@@ -64,7 +43,7 @@
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="rechercheAnimaux"/><i class="helper"></i>Animaux
+                            <input type="checkbox" id="rechercheAnimaux" /><i class="helper"></i>Animaux
                         </label>
                     </div>
                 </div>
@@ -95,92 +74,41 @@
         <template id="destination">
             <div class="grid-item">
                 <h2 class="top-left"> Voyage à {{pays}} </h2>
-                <h2 class="bottom-left" id="weather"> Température :  </h2>
+                <h2 class="bottom-left" id="weather"> Température : </h2>
                 <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
             </div>
         </template>
 
-        <div class="grid-item" id="A1"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A1" onclick="fctTransfert(this)">
             <h2 class="top-left">Voqxdhghvqsd</h2>
-            <h2 class="bottom-left" id="weather">Température : 21°C  </h2>
+            <h2 class="bottom-left" id="weather">Température : 21°C </h2>
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
 
         </div>
-        <div class="grid-item" id="A2"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A2" onclick="fctTransfert(this)">
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
         </div>
 
-        <div class="grid-item" id="A3"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A3" onclick="fctTransfert(this)">
             <img src="Ressources/lukas-blaskevicius--mCckQzuZnw-unsplash (1).jpg">
         </div>
-        <div class="grid-item" id="A4"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A4" onclick="fctTransfert(this)">
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
         </div>
 
-        <div class="grid-item" id="A5"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A5" onclick="fctTransfert(this)">
             <img src="Ressources/van-blog-sydneyfacile-768x512.jpg">
         </div>
-        <div class="grid-item" id="A6"  onclick="fctTransfert(this)">
+        <div class="grid-item" id="A6" onclick="fctTransfert(this)">
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
         </div>
     </div>
 
 
-    <footer class="foot">
-        <div class="footer-wrapper">
-        <div class="social-icons-wrapper">
-                <div class="social-footer-icon">
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <span class="social-footer-facebook"></span>
-                    </a>
-                </div>
-                <div class="social-footer-icon">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <span class="social-footer-instagram"></span>
-                    </a>
-                </div>
-                <div class="social-footer-icon">
-                    <a href="https://www.pinterest.com/" target="_blank">
-                        <span class="social-footer-pinterest"></span>
-                    </a>
-                </div>
-        </div>
-        <div class="links">
-                <p class="footerLink">
-                    <a href="Accueil.html">
-                        Accueil
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="contacte.html">
-                        Contactez-nous
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="QuiSommesNous.html">
-                        A propos
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="politique-de-confidentialite">
-                        Politique de confidentialité
-                    </a>
-                </p>             
-        </div>
-        <div class="copyrights">
-            <span>DestiNeo © 2020</span><br>
-            <span>Tous droits réservés</span>
-        </div>
-    </div>
-    </footer>
+    <div id="footer"></div>
 
-
-    <div id="ancre" class="ancre" onclick="scrollToTop(500)">
-        <a href="#haut">
-            <img src="Ressources/top.png" />
-        </a>
-    </div>
-
+    <div id="buildAncre" ></div>
+    
     <!--fin div contenu-->
 
     <script src="JS/main.js"></script>

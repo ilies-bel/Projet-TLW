@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
 
 <head>
     <title>DestiNeo</title>
@@ -10,89 +10,18 @@
 </head>
 
 
-<body>
+<body onpageshow="buildPage()">
 
-    <header class="background-image">
+    <header id="header">
 
-        <div class="layer">
-
-            <div class="topnav" id="myTopnav">
-                <!--<span id="logo" class="logo"></span>-->
-                <span id="contenuMenu" class="menu ">
-                    <a href="Accueil.html" id="1a">Accueil</a>
-                    <a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a>
-                    <a href="contacte.html" id="3a" onclick="">Contact</a>
-                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                    <i class="fa fa-bars"></i> </a>
-                </span>
-            </div>
-
-
-
-            <div class="homepage-title">
-                <h1>Voici le récapitulatif de votre réservation</h1>
-                <h1>Vous le recevrez également par mail</h1>
-            </div>
-
-        </div>
     </header>
 
    
 
-      <footer class="foot">
-        <div class="footer-wrapper">
-        <div class="social-icons-wrapper">
-                <div class="social-footer-icon">
-                    <a href="https://www.facebook.com/" target="_blank">
-                        <span class="social-footer-facebook"></span>
-                    </a>
-                </div>
-                <div class="social-footer-icon">
-                    <a href="https://www.instagram.com/" target="_blank">
-                        <span class="social-footer-instagram"></span>
-                    </a>
-                </div>
-                <div class="social-footer-icon">
-                    <a href="https://www.pinterest.com/" target="_blank">
-                        <span class="social-footer-pinterest"></span>
-                    </a>
-                </div>
-        </div>
-        <div class="links">
-                <p class="footerLink">
-                    <a href="Accueil.html">
-                        Accueil
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="contacte.html">
-                        Contactez-nous
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="QuiSommesNous.html">
-                        A propos
-                    </a>
-                </p>
-                <p class="footerLink">
-                    <a href="/politique-de-confidentialite">
-                        Politique de confidentialité
-                    </a>
-                </p>             
-        </div>
-        <div class="copyrights">
-            <span>DestiNeo © 2020</span><br>
-            <span>Tous droits réservés</span>
-        </div>
-    </div>
-    </footer>
+    <div id="footer"></div>
 
-
-    <div id="ancre" class="ancre" onclick="scrollToTop(500)">
-        <a href="#haut">
-            <img src="Ressources/top.png" />
-        </a>
-    </div>
+    <div id="buildAncre" ></div>
+    
 
     <!--fin div contenu-->
 

@@ -12,6 +12,36 @@ function buildPage() {
 }
 
 
+//----------------------------------------------------Chargement APi Page d'accueil
+
+
+$(document).ready(function () {
+
+	var ville = 'Chicago';
+	var api = 'http://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=b86d21440d8c9a110912a2eb0845abb4';
+
+
+	
+
+
+	$.getJSON(api, function (data)  {
+		var cTemp;
+		var kTemp;
+				
+		//Temperture in Kelvin
+		kTemp = data.main.temp;
+
+		//City name
+		var city = data.name;
+
+
+		cTemp = (kTemp - 273.15).toFixed(1);
+
+		$("#city").append(city);
+		$("#cTemp").append(cTemp + " &#8451;");
+
+	});
+});
 
 
 

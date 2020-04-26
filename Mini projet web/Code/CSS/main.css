@@ -264,7 +264,7 @@ opacity: 0.85;
   font: bold 24px/45px Helvetica, Sans-Serif; 
   letter-spacing: -1px;  
   padding: 0 10px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
   z-index: 10 ;
 
@@ -275,7 +275,7 @@ opacity: 0.85;
   font: bold 24px/45px Helvetica, Sans-Serif; 
   letter-spacing: -1px;  
   padding: 0 10px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   bottom : 0.5rem;
   position: absolute;
   z-index: 10 ;

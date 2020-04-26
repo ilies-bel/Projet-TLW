@@ -1,208 +1,134 @@
 <html>
-   <head>
-    <link rel="stylesheet" type="text/css" href="CSS/main.css">
-    <meta name="Contact" content="Page de Contact, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-   
-<style>
-        
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS/main.css">
+  <meta name="Contact" content="Page de Contact, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
 
 
-.form-style {
-  position: relative;
-  /*margin:10px auto;*/
-  width: 30%;
-  text-align: center;
-  left: 35%;
-  font: 14px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  background-color: rgb(253, 255, 253); 
-}
-.form-style td {  
-  padding: 0;
-  display: block;
-  list-style: none;
-  margin: 2px 20px 20px 20px;
-}
-.form-style label{
-  margin:0 0 3px 0;
-  padding:0px;
-  display:block;
-  font-weight: bold;
-}
-.form-style .required{
-  color:red;
-}
-.form-style input[type=submit], .form-style input[type=reset]{
-  background: #4eb5f1;
-  padding: 8px 15px 8px 15px;
-  border: none;
-  color: #fff;
-}
-.form-style input[type=submit]:hover, .form-style input[type=reset]:hover{
-  background: #4eb5f1;
-  box-shadow:none;
-  -moz-box-shadow:none;
-  -webkit-box-shadow:none;
-}
-.form-style .field-textarea{
-  height: 100px;
-}
-.form-style input[type=text], 
-.form-style input[type=email],
-textarea{
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  border:1px solid #BEBEBE;
-  padding: 7px;
-  margin:0px;
-  -webkit-transition: all 0.30s ease-in-out;
-  -moz-transition: all 0.30s ease-in-out;
-  -ms-transition: all 0.30s ease-in-out;
-  -o-transition: all 0.30s ease-in-out;
-  outline: none;  
-}
-.form-style .long{
-  width: 100%;
-}
-.form-style input[type=text]:focus, 
-.form-style input[type=email]:focus,
-.form-style textarea:focus{
-  -moz-box-shadow: 0 0 8px #88D5E9;
-  -webkit-box-shadow: 0 0 8px #88D5E9;
-  box-shadow: 0 0 8px #88D5E9;
-  border: 1px solid #88D5E9;
-}
-.error{
-  color: #D8000C;
-  background-color: #FFBABA;
-}
-         
-</style>
-  </head>
-   <body>
-    <div class="background-image">
-    <header >        
+<body>
+
+
+
+  <div class="background-image">
+    <header>
       <div class="topnav" id="myTopnav">
-          <span id="logo" class="logo"></span>
-          <span id="contenuMenu" class="menu ">
-            <a href="Accueil.html" id="1a" class="">Accueil</a>
-            <a href="QuiSommesNous.html" id="2a" class="">Qui sommes-nous</a>
-            <a href="contacte.html" id="3a" class="" onclick="">Contact</a>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                  <i class="fa fa-bars"></i> </a>
-          </span>
+        <span id="logo" class="logo"></span>
+        <span id="contenuMenu" class="menu ">
+          <a href="Accueil.html" id="1a" class="">Accueil</a>
+          <a href="QuiSommesNous.html" id="2a" class="">Qui sommes-nous</a>
+          <a href="contacte.html" id="3a" class="" onclick="">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i> </a>
+        </span>
       </div>
-   
+
       <p id="p_accueil"></p>
       <h1>Vous avez des questions ?</h1>
       <h2>Nous sommes à votre disposition</h2>
-       </p> 
+      </p>
       <h1></h1>
-      <h1></h1>     
+      <h1></h1>
 
-  </header>
+    </header>
 
-      
-      <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post" >
-         
-         <table class="form-style">
-            <tr>
-               <td><h3>Formulaire de contact</h3>
-                  <label>Votre nom <span class="required">*</span></label>
-               </td>
-               <td>
-                  <input type="text" name="name" class="long"/>
-                  <span class="error" id="errorname"></span>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <label>Votre adresse e-mail <span class="required">*</span></label>
-               </td>
-               <td>
 
-                  <input type="email" name="email" class="long"/>
-                  <span class="error" id="erroremail"></span>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <label>Message <span class="required">*</span></label>
-               </td>
-               <td>
-                  <textarea name="message" class="long field-textarea"></textarea>
-                  <span class="error" id="errormsg"></span>
-               </td>
-            </tr>
-            <tr>
-               <td></td>
-               <td>
-                  <input type="submit" value="Envoyer">      
-                  <input type="reset" value="Réinitialiser"> 
-               </td>
-            </tr>
-         </table>
+    <div class="container">
+      <h1>Vous avez des questions ? Contactez nous !</h1>
+      <p>Nous sommes à l'écoute des avis de nos clients</p>
+      <div class="button-container">
+        <a href="tel:0801010200"><button class="button"><span>Appelez nous</span></button></a>
+      </div>
+
+      <form onsubmit="sendMail()">
+
+        <div class="form-group">
+          <input required="required" type="text" id="mail_nom" />
+          <label for="input" class="control-label">Votre Nom</label><i class="bar"></i>
+        </div>
+
+        <div class="form-group">
+          <input required="required" type="text" id="mail_sujet" />
+          <label for="input" class="control-label">Objet</label><i class="bar"></i>
+        </div>
+
+        <div class="form-group">
+          <textarea required="required" id="mail_texte"></textarea>
+          <label for="textarea" class="control-label">Message</label><i class="bar"></i>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" class="button"><span>Envoyer</span></button>
+          <button type="reset" class="button"><span>Recommencer</span></button>
+        </div>
       </form>
 
     </div>
 
-    <footer class="foot">
-      <div class="footer-wrapper">
+
+
+
+
+  </div>
+
+  <footer class="foot">
+    <div class="footer-wrapper">
       <div class="social-icons-wrapper">
-              <div class="social-footer-icon">
-                  <a href="https://www.facebook.com/" target="_blank">
-                      <span class="social-footer-facebook"></span>
-                  </a>
-              </div>
-              <div class="social-footer-icon">
-                  <a href="https://www.instagram.com/" target="_blank">
-                      <span class="social-footer-instagram"></span>
-                  </a>
-              </div>
-              <div class="social-footer-icon">
-                  <a href="https://www.pinterest.com/" target="_blank">
-                      <span class="social-footer-pinterest"></span>
-                  </a>
-              </div>
+        <div class="social-footer-icon">
+          <a href="https://www.facebook.com/" target="_blank">
+            <span class="social-footer-facebook"></span>
+          </a>
+        </div>
+        <div class="social-footer-icon">
+          <a href="https://www.instagram.com/" target="_blank">
+            <span class="social-footer-instagram"></span>
+          </a>
+        </div>
+        <div class="social-footer-icon">
+          <a href="https://www.pinterest.com/" target="_blank">
+            <span class="social-footer-pinterest"></span>
+          </a>
+        </div>
       </div>
       <div class="links">
-              <p class="footerLink">
-                  <a href="Accueil.html">
-                      Accueil
-                  </a>
-              </p>
-              <p class="footerLink">
-                  <a href="contacte.html">
-                      Contactez-nous
-                  </a>
-              </p>
-              <p class="footerLink">
-                  <a href="QuiSommesNous.html">
-                      A propos
-                  </a>
-              </p>
-              <p class="footerLink">
-                  <a href="/politique-de-confidentialite">
-                      Politique de confidentialité
-                  </a>
-              </p>             
+        <p class="footerLink">
+          <a href="Accueil.html">
+            Accueil
+          </a>
+        </p>
+        <p class="footerLink">
+          <a href="contacte.html">
+            Contactez-nous
+          </a>
+        </p>
+        <p class="footerLink">
+          <a href="QuiSommesNous.html">
+            A propos
+          </a>
+        </p>
+        <p class="footerLink">
+          <a href="/politique-de-confidentialite">
+            Politique de confidentialité
+          </a>
+        </p>
       </div>
       <div class="copyrights">
-          <span>DestiNeo © 2020</span><br>
-          <span>Tous droits réservés</span>
+        <span>DestiNeo © 2020</span><br>
+        <span>Tous droits réservés</span>
       </div>
-  </div>
+    </div>
   </footer>
 
   <div id="ancre" class="ancre" onclick="scrollToTop(800)">
-      <a href="#haut">
-          <img src="Ressources/top.png" />
-      </a>
+    <a href="#haut">
+      <img src="Ressources/top.png" />
+    </a>
   </div>
 
   <script src="JS/main.js"></script>
 
-   </body>
+</body>
+
 </html>

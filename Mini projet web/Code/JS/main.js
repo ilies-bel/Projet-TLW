@@ -196,7 +196,7 @@ function calculateTotal() {
 }
 
 //------------------------------------------------------------------------recherche de destination page d'accueil
-
+/*
 
 var basePrix = 40;
 var prixAvion = 120;
@@ -254,7 +254,7 @@ function calculateTotal() {
 function verificateur(){
 	window.location.href = "Recapitulatif.html";
 }
-
+*/
 
 
 

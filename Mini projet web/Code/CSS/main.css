@@ -1,3 +1,4 @@
+
 .wrapper{
 margin-top: 1rem;
 margin-bottom: 1rem;
@@ -7,6 +8,7 @@ text-align: center;
 background-image: url('../Ressources/img3.jpg') ;
 background-repeat: no-repeat;
 background-attachment: fixed;
+background-size: cover;
 top: 0rem;
 color: white;
 
@@ -15,6 +17,10 @@ color: white;
 .wrapper .h1 {
 
   margin: 1rem 0 1rem;
+}
+
+.wrapper .form-group {
+  width: auto !important;
 }
 
 
@@ -320,8 +326,8 @@ h1 {
   font-weight: lighter;
   text-align: center;
   margin: 0 0 2em;
-  color: #000000;
 }
+
 h2 {
   font-size: 2rem;
   font-weight: lighter;
@@ -388,6 +394,7 @@ fieldset {
   display: inline-block;
   margin-bottom: 0;
   padding: 4px;
+  width: 45%;
 }
 
 .form-help {
@@ -408,6 +415,13 @@ fieldset {
   padding-top: 0.25rem;
   margin-top: -1rem;
 }
+
+.pull-right {
+  left: 10%;
+ 
+ }
+
+
 
 .form-group input {
   height: 1.9rem;

@@ -40,9 +40,9 @@
     <div class="midpage">
     <div class="container">
         <form onSubmit="verificateur()">
-          <h1>Reservez dès maintnenant !</h1>
+          <h1>Réservez dès maintenant !</h1>
     
-          <div id="totalPrice">Obtenez un devis instantanés !</div>
+          <div id="totalPrice">Obtenez un devis instantané !</div>
     
           <div class="form-inline ">
     
@@ -51,7 +51,7 @@
               <label for="input" class="control-label">Nom</label><i class="bar"></i>
     
             </div>
-            <div class="form-group pull-right ">
+            <div class="form-group pull-right">
               <input required="required" type="text" id="res_prenom" />
               <label for="input" class="control-label">Prenom</label><i class="bar"></i>
     
@@ -66,7 +66,7 @@
             <label for="input" class="control-label">Email</label><i class="bar"></i>
           </div>
     
-          <div class="form-group pull">
+          <div class="form-group">
             <input type="tel" id="res_tel" />
             <label for="input" class="control-label">numéro de téléphone</label><i class="bar"></i>
           </div>
@@ -86,29 +86,30 @@
     
           </div>
     
-    
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="res_dejeuner" onclick="calculateTotal()"/><i class="helper" ></i>Petit déjeuné
-            </label>
-          </div>
-    
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" id="res_animaux" onclick="calculateTotal()" /><i class="helper"></i>Animaux
-            </label>
-          </div>
+          <br>
+          <br>
+          
     
           <div class="form-inline" id="dates">
-            
-            <div class="form-group pull-right" >
-              <input required="required" type="date" id="res_arrive"  onchange="calculateTotal();" />
-              <label for="input" class="control-label">date arrivé</label><i class="bar"></i>
-            </div>
-            
             <div class="form-group" >
               <input required="required" type="date" id="res_depart" onchange="calculateTotal();"/>
               <label for="input" class="control-label">Date de départ</label><i class="bar"></i>
+            </div>
+            <div class="form-group pull-right" >
+              <input required="required" type="date" id="res_arrive"  onchange="calculateTotal();" />
+              <label for="input" class="control-label">Date arrivée</label><i class="bar"></i>
+            </div>
+            
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="res_dejeuner" onclick="calculateTotal()"/><i class="helper" ></i>Petit déjeuner
+              </label>
+            </div>
+      
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" id="res_animaux" /><i class="helper"></i>Animaux
+              </label>
             </div>
          
         </div>
@@ -120,7 +121,7 @@
           </div>
         
           <div class="button-container form-inline">
-            <button type="submit" class="button" onclick="verificateur()"><span>Continuer</span></button>
+            <button type="submit" class="button" onclick="recapitulatif()"><span>Continuer</span></button>
     
             <button type="reset" class="button"><span>Recommencer</span></button>
           </div>

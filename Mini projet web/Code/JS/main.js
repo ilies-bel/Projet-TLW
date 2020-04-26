@@ -142,7 +142,7 @@ function fctTransfert(x){
 //-------------------------------------------------------------------------------------------calcule dynamique du prix
 
 
-var basePrix = 40;
+var basePrix = 500;
 var prixAvion = 120;
 
 
@@ -183,7 +183,7 @@ function getPrice() {
 		selectorDate[1].classList.remove('has-error');
 	}
 
-	return ("Prix total: " + parseInt(nbJours * (nbEnfants + nbAdulte) * res_dejeuner * 12 + Math.round((nbEnfants * 0.4 + nbAdulte) * basePrix)) + " EUR");
+	return ("Prix total: " + parseInt(nbJours * ((nbEnfants + nbAdulte) * res_dejeuner * 12 ) + (Math.round((nbEnfants * 0.4 + nbAdulte) * basePrix) )) + " EUR");
 }
 
 function calculateTotal() {

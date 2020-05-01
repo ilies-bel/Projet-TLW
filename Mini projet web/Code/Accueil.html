@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html >
+<html>
 
 <head>
     <title>DestiNeo</title>
@@ -10,7 +10,7 @@
 </head>
 
 
-<body >
+<body>
 
     <header id="header">
 
@@ -57,26 +57,23 @@
     </div>
 
 
-    <template>
-        <div class="grid-item">
-            <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
-            <h2 class="top-right">Test</h2>
-        </div>
-    </template>
 
 
 
-    <div class="grid-container">
+
+    <div class="grid-container" id="grille">
 
         <template id="destination">
             <div class="grid-item">
-                <h2 class="top-left"> Voyage à {{pays}} </h2>
-                <h2 class="bottom-left" id="fTemp" > Température : </h2>
-                <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
+                <h2 class="top-left"> Template Voyage à {{ville}}, {{pays}} </h2>
+                <h2 class="bottom-left" id={{ville}}> Température : {{cTemp}} &#8451; </h2>
+                <img src={{image}}>
             </div>
         </template>
+    </div>
 
-        <div class="grid-item" id="A1" onclick="fctTransfert(this)">
+
+    <!--   <div class="grid-item" id="A1" onclick="fctTransfert(this)">
             <h2 class="top-left" id="city">Voyage à </h2>
             <h2 class="bottom-left" id="cTemp">Température : </h2>
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
@@ -98,15 +95,14 @@
         </div>
         <div class="grid-item" id="A6" onclick="fctTransfert(this)">
             <img src="Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg">
-        </div>
-    </div>
+        
+    </div>-->
 
 
     <div id="footer"></div>
 
-    <div id="buildAncre" ></div>
-    
-    <!--fin div contenu-->
+    <div id="buildAncre"></div>
+
 
     <script src="JS/main.js"></script>
 </body>

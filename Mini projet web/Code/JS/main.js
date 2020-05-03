@@ -23,62 +23,63 @@ let dest = [];
 
 
 
-fetch("http://127.0.0.1:5500/data.json")
-	.then(function (resp) {
-		resp.json().then(function (data) {
-			dest = data.destination;
+function gridGen() {
+	fetch("http://127.0.0.1:5500/data.json")
+		.then(function (resp) {
+			resp.json().then(function (data) {
+				dest = data.destination;
 
 
 
 
-			document.getElementsByTagName("body").onload = buildDestination();
+				document.getElementsByTagName("body").onload = buildDestination();
 
-			function buildDestination() {
-				let template = document.querySelector("#destination");
-				var cTemp;
+				function buildDestination() {
+					let template = document.querySelector("#destination");
+					var cTemp;
 
-				for (const v of dest) {// itère sur le tableau
+					for (const v of dest) {// itère sur le tableau
 
-					let clone = document.importNode(template.content, true);      // clone le template
+						let clone = document.importNode(template.content, true);      // clone le template
 
 
-					xhttp[v] = new XMLHttpRequest();
-					xhttp[v].onreadystatechange = function () {
-						if (this.readyState == 4 && this.status == 200) {
-							var data = JSON.parse(this.responseText);
-							var kTemp = data.main.temp;
+						xhttp[v] = new XMLHttpRequest();
+						xhttp[v].onreadystatechange = function () {
+							if (this.readyState == 4 && this.status == 200) {
+								var data = JSON.parse(this.responseText);
+								var kTemp = data.main.temp;
 
-							cTemp = (kTemp - 273.15).toFixed(1);
-							newContent = clone.firstElementChild.innerHTML
-								
-								.replace(/{{ville}}/g, v.ville)
-								.replace(/{{pays}}/g, v.pays)
-								.replace(/{{image}}/g, v.image)
-								.replace(/{{idDestination}}/g, v.idDestination)
-								.replace(/{{cTemp}}/g, cTemp);
+								cTemp = (kTemp - 273.15).toFixed(1);
+								newContent = clone.firstElementChild.innerHTML
 
-							clone.firstElementChild.innerHTML = newContent;
+									.replace(/{{ville}}/g, v.ville)
+									.replace(/{{pays}}/g, v.pays)
+									.replace(/{{image}}/g, v.image)
+									.replace(/{{idDestination}}/g, v.idDestination)
+									.replace(/{{cTemp}}/g, cTemp);
 
-							document.querySelector("#grille").appendChild(clone);		// On ajoute le clone créé
+								clone.firstElementChild.innerHTML = newContent;
 
+								document.querySelector("#grille").appendChild(clone);		// On ajoute le clone créé
+
+
+							}
 
 						}
+						xhttp[v].open("GET", 'http://api.openweathermap.org/data/2.5/weather?q=' + v.ville + '&appid=b86d21440d8c9a110912a2eb0845abb4', true);
+						xhttp[v].send();
+
 
 					}
-					xhttp[v].open("GET", 'http://api.openweathermap.org/data/2.5/weather?q=' + v.ville + '&appid=b86d21440d8c9a110912a2eb0845abb4', true);
-					xhttp[v].send();
+
 
 
 				}
 
 
-
-			}
-
-
+			})
 		})
-	})
-
+}
 
 
 window.onscroll = function () { myFunction(); };   /* Ajout sitcky ou non*/
@@ -142,6 +143,7 @@ window.onload = function () {
 
 	switch (this.onglet) {
 		case "Accueil":
+			this.gridGen();
 			document.getElementById("1a").classList.add("active");
 			break;
 		case "QuiSommesNous":
@@ -151,6 +153,9 @@ window.onload = function () {
 			break;
 		case "Contact":
 			document.getElementById("3a").classList.add("active");
+			break;
+		case "Recapitulatif":
+			this.recapitulatif();
 			break;
 		default:
 			break;
@@ -196,17 +201,6 @@ function fctTransfert(x) {
 	}
 
 }
-
-//--------------------------------------------------------------------------- Fonction de transfert du formulaire a la page récapitulatif
-
-
-function recapitulatif() {
-
-	window.location.href = "Contact.html";
-
-}
-
-
 
 
 //-------------------------------------------------------------------------------------------calcule dynamique du prix
@@ -345,6 +339,8 @@ function buildPage() {
 //------------------------------------------------------
 //-------------------------------------------------------
 
+
+
 function recapitulatif() {
 	var nom;
 	var prenom;
@@ -354,6 +350,7 @@ function recapitulatif() {
 	var nbE;
 
 	var infos = location.search;
+	var teste = location.search;
 	infos = decodeURI(infos);
 	infos = infos.split('&');
 
@@ -376,6 +373,10 @@ function recapitulatif() {
 
 	datearrivee = infos[7].split('=');
 	datearrivee = datearrivee[1].split('arrivee,');
+
+
+	console.log(teste);
+
 
 
 	document.getElementById('paraRecap').innerHTML = 'Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.';

@@ -4,17 +4,19 @@
             "idDestination":"A1",
             "pays": "Bali",
             "ville": "Chicago",
-            "dejeuner": "oui",
+            "dejeuner": "1",
             "animaux": "1",
             "basePrix": "1200",
+            "prixAvion": "700",
             "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
-            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl",
+            "prochaineDate": "2020-05-01"
         },
         {
             "idDestination":"A2",
             "pays": "Paris",
             "ville": "Paris",
-            "dejeuner": "non",
+            "dejeuner": "0",
             "animaux": "1",
             "basePrix": "760",
             "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
@@ -24,9 +26,10 @@
             "idDestination":"A3",
             "pays": "ffff",
             "ville": "Abidjan",
-            "dejeuner": "oui",
+            "dejeuner": "1",
             "animaux": "0",
             "basePrix": "890",
+            "prixAvion": "700",
             "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
             "description": "Lorem sumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
         },
@@ -34,9 +37,32 @@
             "idDestination":"A4",
             "pays": "dddd",
             "ville": "Tokyo",
-            "dejeuner": "non",
+            "dejeuner": "0",
             "animaux": "0",
             "basePrix": "500",
+            "prixAvion": "700",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        },
+        {
+            "idDestination":"A5",
+            "pays": "dd5555dd",
+            "ville": "Tokyo",
+            "dejeuner": "0",
+            "animaux": "0",
+            "basePrix": "500",
+            "prixAvion": "700",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        },
+        {
+            "idDestination":"A6",
+            "pays": "ddd54d",
+            "ville": "Tokyo",
+            "dejeuner": "0",
+            "animaux": "0",
+            "basePrix": "500",
+            "prixAvion": "700",
             "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
             "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
         }

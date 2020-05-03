@@ -18,12 +18,12 @@
 
     <div class="wrapper">
         <h1>Vous cherchez quelque chose de précis ?</h1>
-        <form onSubmit="recherche()">
+        <form >
 
             <div class="form-inline">
 
                 <div class="form-group">
-                    <input required="required" type="date" id="rechercheDate" />
+                    <input required="required" type="date" id="rechercheDate" oninput="recherche()"/>
                     <label for="input" class="control-label">Départ prévu</label><i class="bar"></i>
                 </div>
 
@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="recherchePetitDejeuner" /><i class="helper"></i>Petit déjeuné
+                            <input type="checkbox" id="recherchePetitDejeuner" oninput="recherche()"/><i class="helper"></i>Petit déjeuné
                         </label>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="rechercheAnimaux" /><i class="helper"></i>Animaux
+                            <input type="checkbox" id="rechercheAnimaux" oninput="recherche()"/><i class="helper"></i>Animaux
                         </label>
                     </div>
                 </div>

@@ -156,6 +156,9 @@ window.onload = function () {
 			break;
 		case "Recapitulatif":
 			this.recapitulatif();
+			$('.background-image').css({ "background-image": "url('../Ressources/img8.jpg')" });
+			$('.layer').css({ "background-color": "rgba(0, 0, 0, 0)" });
+
 			break;
 		default:
 			break;
@@ -260,23 +263,54 @@ function calculateTotal() {
 }
 
 //------------------------------------------------------------------------recherche de destination page d'accueil
-/*
 
-var basePrix = 40;
-var prixAvion = 120;
+function suppression(id) {
+
+	document.getElementById(id).parentElement.setAttribute("hidden", true);
+}
 
 
-
-function getPrice() {
+function recherche() {
 	// récupération des variables
 
 	var recherchePetitDejeuner = document.getElementById('recherchePetitDejeuner').checked || 0;
 	var rechercheAnimaux = document.getElementById('rechercheAnimaux').checked || 0;
 	var rechercheDate = new Date(document.getElementById("rechercheDate").value);
+	console.log("fonction lancé");
 
-	nbJours = Math.round((endDt - startDt) / (24 * 3600 * 1000)) || 0;
+	fetch("http://127.0.0.1:5500/data.json")
+		.then(function (resp) {
+			resp.json().then(function (data) {
+				dest = data.destination;
+				console.log(dest);
 
-	var selectorParticipants = document.querySelectorAll("#participants > * ");
+				for (const v of dest) {
+
+					console.log(v.idDestination + " Fetch reussi");
+
+					if (recherchePetitDejeuner == 1 && v.dejeuner == "0") {
+						suppression(v.idDestination);
+					}
+					if (rechercheAnimaux == 1 && v.animaux == "0") {
+						suppression(v.idDestination);
+					}
+					if (rechercheDate == 1 && v.dejeuner == "0") {
+						suppression(v.idDestination);
+					}
+
+					//this.document.getElementById("plan").classList.add("contenu1");
+
+
+				}
+
+
+			})
+
+		});
+}
+
+
+/*
 	// on verifie si les enfants sont accompagnes
 	if (nbAdulte == 0 && nbEnfants > 0) {
 		selectorParticipants[0].classList.add('has-error');
@@ -313,18 +347,18 @@ function calculateTotal() {
 	document.getElementById('totalPrice').innerHTML = total;
 	totalEl.style.display = 'block';
 }
+*/
 
-
-function verificateur(){
+function verificateur() {
 	window.location.href = "Recapitulatif.html";
 }
-*/
+
 
 
 //--------------------------------------------------------Builder de page pour afficher le header et footer automatiquement
 
 function buildPage() {
-	var header = '<div class="background-image"><div class="layer"><div class="topnav" id="myTopnav"><!--<span id="logo" class="logo"></span>--><span id="contenuMenu" class="menu "><a href="Accueil.html" id="1a">Accueil</a><a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a><a href="contact.html" id="3a" onclick="">Contact</a><a href="javascript:void(0);"class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a></span></div><div class="homepage-title"><h1>Découvrez le Monde</h1><h1>Découvrez-vous</h1></div></div></div>';
+	var header = '<div class="background-image"><div id="layer" class="layer"><div class="topnav" id="myTopnav"><!--<span id="logo" class="logo"></span>--><span id="contenuMenu" class="menu "><a href="Accueil.html" id="1a">Accueil</a><a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a><a href="contact.html" id="3a" onclick="">Contact</a><a href="javascript:void(0);"class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a></span></div><div class="homepage-title"><h1>Découvrez le Monde</h1><h1>Découvrez-vous</h1></div></div></div>';
 	var footer = '<div class="foot"><div class="footer-wrapper"><div class="social-icons-wrapper"><div class="social-footer-icon"><a href="https://www.facebook.com/" target="_blank"><span class="social-footer-facebook"></span></a></div><div class="social-footer-icon"><a href="https://www.instagram.com/" target="_blank"><span class="social-footer-instagram"></span></a></div><div class="social-footer-icon"><a href="https://www.pinterest.com/" target="_blank"><span class="social-footer-pinterest"></span></a></div></div><div class="links"><p class="footerLink"><a href="Accueil.html">Accueil</a></p><p class="footerLink"><a href="contact.html">Contactez-nous</a></p><p class="footerLink"><a href="QuiSommesNous.html">A propos</a></p><p class="footerLink"><a href="politique-de-confidentialite">Politique de confidentialité</a></p></div><div class="copyrights"><span>DestiNeo © 2020</span><br><span>Tous droits réservés</span></div></div></div>';
 	var ancre = ' <div id="ancre" class="ancre" onclick="scrollToTop(500)"><a href="#haut"><img src="Ressources/top.png" /></a></div>'
 
@@ -350,7 +384,7 @@ function recapitulatif() {
 	var nbE;
 	var infos = location.search;
 
-	
+
 
 
 	infos = decodeURI(infos);
@@ -377,15 +411,15 @@ function recapitulatif() {
 	datearrivee = datearrivee[1].split('arrivee,');
 	//var startDt = new Date(document.getElementById("res_depart").value);
 
-	nbJours = Math.round( ( new Date(datearrivee) - new Date(datedepart) ) / (24 * 3600 * 1000)) ;
-	
-	
+	nbJours = Math.round((new Date(datearrivee) - new Date(datedepart)) / (24 * 3600 * 1000));
+
+
 	console.log(nbJours);
 
 
 	$("#paraRecap").append('Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.');
 	//document.getElementById('paraRecap').innerHTML = 'Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.';
 	document.getElementById('paraRecap2').innerHTML = 'La réservation est au nom de : ' + nom.toString() + ' ' + prenom.toString() + '<br>pour ' + nbA + ' adulte(s) et ' + nbE + ' enfant(s),' + '<br>pour un depart le : ' + datedepart + '<br> et un retour le : ' + datearrivee;
-	
+
 	document.getElementById('paraRecap3').innerHTML = '<br> Veuillez-nous contacter pour toute autre question.';
 }

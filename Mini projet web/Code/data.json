@@ -1,0 +1,44 @@
+{
+    "destination": [
+        {
+            "idDestination":"A1",
+            "pays": "Bali",
+            "ville": "Chicago",
+            "dejeuner": "oui",
+            "animaux": "1",
+            "basePrix": "1200",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        },
+        {
+            "idDestination":"A2",
+            "pays": "Paris",
+            "ville": "Paris",
+            "dejeuner": "non",
+            "animaux": "1",
+            "basePrix": "760",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem isumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        },
+        {
+            "idDestination":"A3",
+            "pays": "ffff",
+            "ville": "Abidjan",
+            "dejeuner": "oui",
+            "animaux": "0",
+            "basePrix": "890",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem sumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        },
+        {
+            "idDestination":"A4",
+            "pays": "dddd",
+            "ville": "Tokyo",
+            "dejeuner": "non",
+            "animaux": "0",
+            "basePrix": "500",
+            "image": "Ressources/andrew-scherle-Kazu2Eap8Yg-unsplash.jpg",
+            "description": "Lorem iumjhzjbqsdhqdslqsdlkdkljqlkjqdfklmqfklqsdfkl"
+        }
+    ]
+}

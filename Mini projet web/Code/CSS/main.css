@@ -1,21 +1,18 @@
-
-.wrapper{
-margin-top: 1rem;
-margin-bottom: 1rem;
-padding: 3rem;
-width: 100%;
-text-align: center;
-background-image: url('../Ressources/img3.jpg') ;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-size: cover;
-top: 0rem;
-color: white;
-
+.wrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 3rem;
+  width: 100%;
+  text-align: center;
+  background-image: url('../Ressources/img3.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  top: 0rem;
+  color: white !important;
 }
 
 .wrapper .h1 {
-
   margin: 1rem 0 1rem;
 }
 
@@ -23,93 +20,88 @@ color: white;
   width: auto !important;
 }
 
-
 /*style de la bar de navigation ----------------------------------------------------------------------------------------------------*/
+
 .homepage-title {
-text-align: center;
-margin-top: 20rem ;
-margin-bottom: 20rem ;
-color: white;
+  text-align: center;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+  color: white;
 }
 
-
-
-
-
 /* Add a black background color to the top navigation */
+
 .topnav {
   text-align: center;
-
   /*background-color: #fff;*/
- 
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-	
-	color: white;
-	text-align: center;
+}
+
+/* Style the links inside the navigation bar */
+
+.topnav a {
+  color: white;
+  text-align: center;
   padding: 12px 14px;
   display: inline-block;
-	text-decoration: none;
-	font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
   font-weight: bold;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-	background-color: rgb(143, 214, 145);
-	color: white;
-  }
-  
-  /* Hide the link that should open and close the topnav on small screens */
-  .topnav .icon {
-	display: none;
-  }
+}
+
+/* Add an active class to highlight the current page */
+
+.topnav a.active {
+  background-color: rgb(143, 214, 145);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+
+.topnav .icon {
+  display: none;
+}
 
 .menu {
   display: inline-block;
   color: #337ab7;
-  padding: 10px ;
-  }
+  padding: 10px;
+}
 
 .logo {
   font-size: 40px;
   color: red;
   margin-left: 10px;
   text-align: left;
-  }
+}
 
 .sticky {
   top: 0px;
   position: fixed;
   background-color: #333;
-  width: 100% ;
-  margin-right: 2%;
-  z-index : 99 ;
-  
+  width: 98%;
+  margin-right: 16px;
+  z-index: 99;
 }
 
 .background-image {
-  background-image: url('../Ressources/img-entete1.jpg') ;
+  background-image: url('../Ressources/img-entete1.jpg');
   height: 50em;
   position: relative;
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
-.midpage{
-  background-image: url('../Ressources/img4.jpg') ;
+.midpage {
+  background-image: url('../Ressources/img4.jpg');
   position: relative;
-  margin-top: 0% ;
+  margin-top: 0%;
   top: 0%;
   height: auto;
   background-attachment: fixed;
@@ -118,15 +110,15 @@ color: white;
   background-size: cover;
 }
 
-.container{
-top:auto;
+.container {
+  top: auto;
 }
 
 .layer {
-  background-color: rgba(0,0,0, 0.5 );
-    position: absolute ;
-    width: 100%;
-    height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .contenu1 {
@@ -135,43 +127,45 @@ top:auto;
   background-attachment: fixed;
   background-size: 5000px 5000px;
   height: auto;
-
 }
 
-
-.ancre
-{
-position: fixed;
-right: -50px;
-bottom:  15%;
-opacity: 0.85;
+.ancre {
+  position: fixed;
+  right: -50px;
+  bottom: 15%;
+  opacity: 0.85;
 }
 
-.ancre:hover{
+.ancre:hover {
   transform: scale(1.5);
 }
 
 /*style du footer ----------------------------------------------------------------------------------------------------*/
+
 /*-----------------------------------------------------------------------------------*/
+
 .footer-wrapper {
-    color: rgb(255, 255, 255);
-    margin-bottom: 0%;
-    padding: 150px 15px 60px;
-    text-align: center;
-    
+  color: rgb(255, 255, 255);
+  margin-bottom: 0%;
+  padding: 150px 15px 60px;
+  text-align: center;
 }
+
 .social-icons-wrapper {
   padding: 1px;
 }
+
 .social-icons-wrapper .social-footer-icon {
   height: 22px;
   width: 22px;
   margin: 0 15px;
   display: inline-block;
 }
+
 .links {
   margin: 35px 0;
 }
+
 .copyrights {
   font-size: .9rem;
   font-weight: 300;
@@ -187,6 +181,7 @@ opacity: 0.85;
   background-repeat: no-repeat;
   background-image: url(https://cdn1.voyagesdetective.fr/Facebook-2x_1.png);
 }
+
 .social-footer-instagram {
   height: 100%;
   width: 100%;
@@ -195,6 +190,7 @@ opacity: 0.85;
   background-repeat: no-repeat;
   background-image: url(https://cdn1.voyagesdetective.fr/Instagram-2x_1.png);
 }
+
 .social-footer-pinterest {
   height: 100%;
   width: 100%;
@@ -204,24 +200,20 @@ opacity: 0.85;
   background-image: url(https://cdn1.voyagesdetective.fr/pinterest_1.png);
 }
 
-.foot{
+.foot {
   margin-top: 10px;
   margin-bottom: 0%;
   background-color: rgb(36, 34, 34);
 }
 
+/*Affichage des images de presentation ----------------------------------------------------------------------------------------------------*/
 
-  /*Affichage des images de presentation ----------------------------------------------------------------------------------------------------*/
 @media (max-width: 768px) {
-
   .grid-container {
-     display: block !important;
-
+    display: block !important;
   }
-
 }
 
-  
 .grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -230,9 +222,6 @@ opacity: 0.85;
   position: relative;
   color: white;
 }
-  
-
-
 
 .grid-item {
   text-align: center;
@@ -242,84 +231,64 @@ opacity: 0.85;
   position: relative;
 }
 
-
-
 .grid-item img {
-	height: 100%;
+  height: 100%;
   width: 100%;
   object-fit: cover;
   position: relative;
-
   transition: transform 400ms ease-out;
-  }
+}
 
-  .grid-item img:hover {
+.grid-item img:hover {
   transform: scale(1.15);
   position: relative;
 }
 
-
 .grid-item .top-left {
-  color: white; 
-  font: bold 24px/45px Helvetica, Sans-Serif; 
-  letter-spacing: -1px;  
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
   padding: 0 10px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 10 ;
-
+  z-index: 10;
 }
 
 .grid-item .bottom-left {
-  color: white; 
-  font: bold 24px/45px Helvetica, Sans-Serif; 
-  letter-spacing: -1px;  
+  color: white;
+  font: bold 24px/45px Helvetica, Sans-Serif;
+  letter-spacing: -1px;
   padding: 0 10px;
-  background: rgba(0, 0, 0, 0.7);
-  bottom : 0.5rem;
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0.5rem;
   position: absolute;
-  z-index: 10 ;
-
+  z-index: 10;
 }
-
 
 /*css des différents formulaires ----------------------------------------------------------------------------------------------------*/
 
-
-
 /*css formulaire contact ----------------------------------------------------------------------------------------------------*/
-.formcontact{
+
+.formcontact {
   display: block;
   position: absolute;
-
 }
-
 
 /*--------------------------------------------------------------------------------------------------------------------------------*/
 
-body,
-input,
-select,
-textarea,
-body * {
+body, input, select, textarea, body * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
 }
-body::after, body::before,
-input::after,
-input::before,
-select::after,
-select::before,
-textarea::after,
-textarea::before,
-body *::after,
-body *::before {
+
+body::after, body::before, input::after, input::before, select::after, select::before, textarea::after, textarea::before, body *::after, body *::before {
   box-sizing: border-box;
 }
 
 body {
   background-image: -webkit-linear-gradient(top, #f2f2f2, #e6e6e6);
   background-image: linear-gradient(top, #f2f2f2, #e6e6e6);
+  margin: 0% 1%;
 }
 
 h1 {
@@ -335,6 +304,7 @@ h2 {
   text-align: center;
   margin: 0 0 2em;
 }
+
 h3 {
   font-size: 1.75rem;
   font-weight: lighter;
@@ -351,6 +321,7 @@ h3 {
   padding: 3rem 5rem 0;
   border-radius: 1px;
 }
+
 .container::before {
   content: '';
   position: absolute;
@@ -360,16 +331,17 @@ h3 {
   bottom: 0;
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
   -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  transform: scale(0.98);
   -webkit-transition: -webkit-transform 0.28s ease-in-out;
   transition: -webkit-transform 0.28s ease-in-out;
   transition: transform 0.28s ease-in-out;
   transition: transform 0.28s ease-in-out, -webkit-transform 0.28s ease-in-out;
   z-index: -1;
 }
+
 .container:hover::before {
   -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .button-container {
@@ -382,16 +354,14 @@ fieldset {
   border: none;
 }
 
-.form-radio,
-.form-group {
+.form-radio, .form-group {
   position: relative;
   margin-top: 2.25rem;
   margin-bottom: 2.25rem;
   text-align: left;
 }
 
-.form-inline > .form-group,
-.form-inline > .btn {
+.form-inline>.form-group, .form-inline>.btn {
   display: inline-block;
   margin-bottom: 0;
   padding: 4px;
@@ -404,14 +374,17 @@ fieldset {
   color: #b3b3b3;
   font-size: 0.8rem;
 }
+
 .checkbox .form-help, .form-radio .form-help, .form-group .form-help {
   position: absolute;
   width: 100%;
 }
+
 .checkbox .form-help {
   position: relative;
   margin-bottom: 1rem;
 }
+
 .form-radio .form-help {
   padding-top: 0.25rem;
   margin-top: -1rem;
@@ -419,17 +392,16 @@ fieldset {
 
 .pull-right {
   left: 10%;
- 
- }
-
-
+}
 
 .form-group input {
   height: 1.9rem;
 }
+
 .form-group textarea {
   resize: none;
 }
+
 .form-group select {
   width: 100%;
   font-size: 1rem;
@@ -440,6 +412,7 @@ fieldset {
   line-height: 1.6;
   box-shadow: none;
 }
+
 .form-group .control-label {
   text-align: left;
   position: absolute;
@@ -453,11 +426,13 @@ fieldset {
   -webkit-transition: all 0.28s ease;
   transition: all 0.28s ease;
 }
+
 .form-group .bar {
   position: relative;
   border-bottom: 0.0625rem solid #999;
   display: block;
 }
+
 .form-group .bar::before {
   content: '';
   height: 0.125rem;
@@ -470,8 +445,8 @@ fieldset {
   transition: left 0.28s ease, width 0.28s ease;
   z-index: 2;
 }
-.form-group input,
-.form-group textarea {
+
+.form-group input, .form-group textarea {
   display: block;
   background: none;
   padding: 0.125rem 0.125rem 0.0625rem;
@@ -485,56 +460,40 @@ fieldset {
   transition: all 0.28s ease;
   box-shadow: none;
 }
+
 .form-group input[type="file"] {
   line-height: 1;
 }
-.form-group input[type="file"] ~ .bar {
+
+.form-group input[type="file"]~.bar {
   display: none;
 }
-.form-group select,
-.form-group input:focus,
-.form-group input:valid,
-.form-group input.form-file,
-.form-group input.has-value,
-.form-group textarea:focus,
-.form-group textarea:valid,
-.form-group textarea.form-file,
-.form-group textarea.has-value {
+
+.form-group select, .form-group input:focus, .form-group input:valid, .form-group input.form-file, .form-group input.has-value, .form-group textarea:focus, .form-group textarea:valid, .form-group textarea.form-file, .form-group textarea.has-value {
   color: #333;
 }
-.form-group select ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group input:valid ~ .control-label,
-.form-group input.form-file ~ .control-label,
-.form-group input.has-value ~ .control-label,
-.form-group textarea:focus ~ .control-label,
-.form-group textarea:valid ~ .control-label,
-.form-group textarea.form-file ~ .control-label,
-.form-group textarea.has-value ~ .control-label {
+
+.form-group select~.control-label, .form-group input:focus~.control-label, .form-group input:valid~.control-label, .form-group input.form-file~.control-label, .form-group input.has-value~.control-label, .form-group textarea:focus~.control-label, .form-group textarea:valid~.control-label, .form-group textarea.form-file~.control-label, .form-group textarea.has-value~.control-label {
   font-size: 0.8rem;
   color: gray;
   top: -1rem;
   left: 0;
 }
-.form-group select:focus,
-.form-group input:focus,
-.form-group textarea:focus {
+
+.form-group select:focus, .form-group input:focus, .form-group textarea:focus {
   outline: none;
 }
-.form-group select:focus ~ .control-label,
-.form-group input:focus ~ .control-label,
-.form-group textarea:focus ~ .control-label {
+
+.form-group select:focus~.control-label, .form-group input:focus~.control-label, .form-group textarea:focus~.control-label {
   color: #337ab7;
 }
-.form-group select:focus ~ .bar::before,
-.form-group input:focus ~ .bar::before,
-.form-group textarea:focus ~ .bar::before {
+
+.form-group select:focus~.bar::before, .form-group input:focus~.bar::before, .form-group textarea:focus~.bar::before {
   width: 100%;
   left: 0;
 }
 
-.checkbox label,
-.form-radio label {
+.checkbox label, .form-radio label {
   position: relative;
   cursor: pointer;
   padding-left: 2rem;
@@ -542,8 +501,8 @@ fieldset {
   color: #333;
   display: block;
 }
-.checkbox input,
-.form-radio input {
+
+.checkbox input, .form-radio input {
   width: auto;
   opacity: 0.00000001;
   position: absolute;
@@ -553,6 +512,7 @@ fieldset {
 .radio {
   margin-bottom: 1rem;
 }
+
 .radio .helper {
   position: absolute;
   top: -0.25rem;
@@ -561,11 +521,12 @@ fieldset {
   display: block;
   font-size: 1rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   color: #999;
 }
+
 .radio .helper::before, .radio .helper::after {
   content: '';
   position: absolute;
@@ -581,20 +542,24 @@ fieldset {
   border-radius: 50%;
   border: 0.125rem solid currentColor;
 }
+
 .radio .helper::after {
   -webkit-transform: scale(0);
-          transform: scale(0);
+  transform: scale(0);
   background-color: #337ab7;
   border-color: #337ab7;
 }
+
 .radio label:hover .helper {
   color: #337ab7;
 }
-.radio input:checked ~ .helper::after {
+
+.radio input:checked~.helper::after {
   -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  transform: scale(0.5);
 }
-.radio input:checked ~ .helper::before {
+
+.radio input:checked~.helper::before {
   color: #337ab7;
 }
 
@@ -602,6 +567,7 @@ fieldset {
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
+
 .checkbox .helper {
   color: #999;
   position: absolute;
@@ -615,6 +581,7 @@ fieldset {
   -webkit-transition: border-color 0.28s ease;
   transition: border-color 0.28s ease;
 }
+
 .checkbox .helper::before, .checkbox .helper::after {
   position: absolute;
   height: 0;
@@ -622,61 +589,65 @@ fieldset {
   background-color: #337ab7;
   display: block;
   -webkit-transform-origin: left top;
-          transform-origin: left top;
+  transform-origin: left top;
   border-radius: 0.25rem;
   content: '';
   -webkit-transition: opacity 0.28s ease, height 0s linear 0.28s;
   transition: opacity 0.28s ease, height 0s linear 0.28s;
   opacity: 0;
 }
+
 .checkbox .helper::before {
   top: 0.65rem;
   left: 0.38rem;
   -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  transform: rotate(-135deg);
   box-shadow: 0 0 0 0.0625rem #fff;
 }
+
 .checkbox .helper::after {
   top: 0.3rem;
   left: 0;
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
+
 .checkbox label:hover .helper {
   color: #337ab7;
 }
-.checkbox input:checked ~ .helper {
+
+.checkbox input:checked~.helper {
   color: #337ab7;
 }
-.checkbox input:checked ~ .helper::after, .checkbox input:checked ~ .helper::before {
+
+.checkbox input:checked~.helper::after, .checkbox input:checked~.helper::before {
   opacity: 1;
   -webkit-transition: height 0.28s ease;
   transition: height 0.28s ease;
 }
-.checkbox input:checked ~ .helper::after {
+
+.checkbox input:checked~.helper::after {
   height: 0.5rem;
 }
-.checkbox input:checked ~ .helper::before {
+
+.checkbox input:checked~.helper::before {
   height: 1.2rem;
   -webkit-transition-delay: 0.28s;
-          transition-delay: 0.28s;
+  transition-delay: 0.28s;
 }
 
-.radio + .radio,
-.checkbox + .checkbox {
+.radio+.radio, .checkbox+.checkbox {
   margin-top: 1rem;
 }
 
 .has-error .legend.legend, .has-error.form-group .control-label.control-label {
   color: #d9534f;
 }
-.has-error.form-group .form-help,
-.has-error.form-group .helper, .has-error.checkbox .form-help,
-.has-error.checkbox .helper, .has-error.radio .form-help,
-.has-error.radio .helper, .has-error.form-radio .form-help,
-.has-error.form-radio .helper {
+
+.has-error.form-group .form-help, .has-error.form-group .helper, .has-error.checkbox .form-help, .has-error.checkbox .helper, .has-error.radio .form-help, .has-error.radio .helper, .has-error.form-radio .form-help, .has-error.form-radio .helper {
   color: #d9534f;
 }
+
 .has-error .bar::before {
   background: #d9534f;
   left: 0;
@@ -697,11 +668,13 @@ fieldset {
   overflow: hidden;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
+
 .button span {
   color: #fff;
   position: relative;
   z-index: 1;
 }
+
 .button::before {
   content: '';
   position: absolute;
@@ -716,21 +689,24 @@ fieldset {
   z-index: 0;
   opacity: 1;
   -webkit-transform: translate(-50%, -50%) scale(0);
-          transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
 }
+
 .button:hover {
   color: #337ab7;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
 }
+
 .button:active::before, .button:focus::before {
   -webkit-transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
   transition: opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
   transition: transform 1.12s ease, opacity 0.28s ease 0.364s;
   transition: transform 1.12s ease, opacity 0.28s ease 0.364s, -webkit-transform 1.12s ease;
   -webkit-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
   opacity: 0;
 }
+
 .button:focus {
   outline: none;
 }

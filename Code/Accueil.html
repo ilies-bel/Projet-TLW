@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <html>
 
 <head>
@@ -59,15 +57,14 @@
 
 
 
-
-
     <div class="grid-container" id="grille">
-
         <template id="destination">
-            <div class="grid-item">
-                <h2 class="top-left"> Template Voyage à {{ville}}, {{pays}} </h2>
-                <h2 class="bottom-left" id={{ville}}> Température : {{cTemp}} &#8451; </h2>
-                <img src={{image}}>
+            <div>
+                <div onclick="fctTransfert(this)" class="grid-item" id={{idDestination}}>
+                    <h2 class="top-left"> Template Voyage à {{ville}}, {{pays}} </h2>
+                    <h2 class="bottom-left" id={{ville}}> Température : {{cTemp}} &#8451; </h2>
+                    <img src={{image}}>
+                </div>
             </div>
         </template>
     </div>

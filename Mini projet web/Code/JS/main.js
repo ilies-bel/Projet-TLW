@@ -1,21 +1,67 @@
 //--------------------------------------------------------Builder de page pour afficher le header et footer automatiquement
 
 function buildPage() {
-	var header = '<div class="background-image"><div class="layer"><div class="topnav" id="myTopnav"><!--<span id="logo" class="logo"></span>--><span id="contenuMenu" class="menu "><a href="Accueil.html" id="1a">Accueil</a><a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a><a href="contact.html" id="3a" onclick="">Contact</a><a href="javascript:void(0);"class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a></span></div><div class="homepage-title"><h1>Découvrez le Monde</h1><h1>Découvrez-vous</h1></div></div></div>' ;
-	var footer = '<div class="foot"><div class="footer-wrapper"><div class="social-icons-wrapper"><div class="social-footer-icon"><a href="https://www.facebook.com/" target="_blank"><span class="social-footer-facebook"></span></a></div><div class="social-footer-icon"><a href="https://www.instagram.com/" target="_blank"><span class="social-footer-instagram"></span></a></div><div class="social-footer-icon"><a href="https://www.pinterest.com/" target="_blank"><span class="social-footer-pinterest"></span></a></div></div><div class="links"><p class="footerLink"><a href="Accueil.html">Accueil</a></p><p class="footerLink"><a href="contact.html">Contactez-nous</a></p><p class="footerLink"><a href="QuiSommesNous.html">A propos</a></p><p class="footerLink"><a href="politique-de-confidentialite">Politique de confidentialité</a></p></div><div class="copyrights"><span>DestiNeo © 2020</span><br><span>Tous droits réservés</span></div></div></div>' ;
+	var header = '<div class="background-image"><div class="layer"><div class="topnav" id="myTopnav"><!--<span id="logo" class="logo"></span>--><span id="contenuMenu" class="menu "><a href="Accueil.html" id="1a">Accueil</a><a href="QuiSommesNous.html" id="2a">Qui sommes-nous</a><a href="contact.html" id="3a" onclick="">Contact</a><a href="javascript:void(0);"class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> </a></span></div><div class="homepage-title"><h1>Découvrez le Monde</h1><h1>Découvrez-vous</h1></div></div></div>';
+	var footer = '<div class="foot"><div class="footer-wrapper"><div class="social-icons-wrapper"><div class="social-footer-icon"><a href="https://www.facebook.com/" target="_blank"><span class="social-footer-facebook"></span></a></div><div class="social-footer-icon"><a href="https://www.instagram.com/" target="_blank"><span class="social-footer-instagram"></span></a></div><div class="social-footer-icon"><a href="https://www.pinterest.com/" target="_blank"><span class="social-footer-pinterest"></span></a></div></div><div class="links"><p class="footerLink"><a href="Accueil.html">Accueil</a></p><p class="footerLink"><a href="contact.html">Contactez-nous</a></p><p class="footerLink"><a href="QuiSommesNous.html">A propos</a></p><p class="footerLink"><a href="politique-de-confidentialite">Politique de confidentialité</a></p></div><div class="copyrights"><span>DestiNeo © 2020</span><br><span>Tous droits réservés</span></div></div></div>';
 	var ancre = ' <div id="ancre" class="ancre" onclick="scrollToTop(500)"><a href="#haut"><img src="Ressources/top.png" /></a></div>'
 
 	$("#header").append(header);
 	$("#footer").append(footer);
 
-	document.getElementById("buildAncre").innerHTML = ancre ;
+	document.getElementById("buildAncre").innerHTML = ancre;
 }
 
 
 
 
 
+function recapitulatif() {
+	var nom;
+	var prenom;
+	var datearrivee;
+	var datedepart;
+	var nbA;
+	var nbE;
+	
+	var infos = location.search ;
+	infos = decodeURI(infos);
+	infos = infos.split('&');
 
+	nom = infos[0].split('=');
+	nom = nom[1].split('?nom,');
+	nom = nom[0].replace("+","");
+
+	prenom = infos[1].split('=');
+	prenom = prenom[1].split('prenom,');
+	prenom = prenom[0].replace("+","");
+
+	nbA = infos[4].split('=');
+	nbA = nbA[1].split('nbAdulte,');
+	
+	nbE = infos[5].split('=');
+	nbE = nbE[1].split('nbEnfant,');
+
+	datedepart = infos[6].split('=');
+	datedepart = datedepart[1].split('depart,');
+
+	datearrivee = infos[7].split('=');
+	datearrivee = datearrivee[1].split('arrivee,');
+	
+
+	document.getElementById('paraRecap').innerHTML = 'Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.';
+	document.getElementById('paraRecap2').innerHTML = 'La réservation est au nom de : ' + nom.toString() +' '+prenom.toString() +'<br>pour '+nbA+' adulte(s) et '+nbE+' enfant(s),'+'<br>pour un depart le : '+datedepart+'<br> et un retour le : '+datearrivee;
+	document.getElementById('paraRecap3').innerHTML = '<br> Veuillez-nous contacter pour toute autre question.';
+}
+
+function extractUrlParams(){	
+	var t = location.search.substring(1).split('&');
+	var f = [];
+	for (var i=0; i<t.length; i++){
+		var x = t[ i ].split('=');
+		f[x[0]]=x[1];
+	}
+	return f;
+}
 
 
 
@@ -35,10 +81,10 @@ function myFunction() {
 */
 
 let destination = [
-	{ pays: "Bali", dejeune: "oui" , animaux : "oui", basePrix : "1200"},
-	{ pays: "Paris", dejeune: "non" , animaux : "oui", basePrix : "760"},
-	{ pays: "ffff", dejeune: "oui" , animaux : "non", basePrix : "890"},
-	{ pays: "dddd", dejeune: "non" , animaux : "non", basePrix : "500"},
+	{ pays: "Bali", dejeune: "oui", animaux: "oui", basePrix: "1200" },
+	{ pays: "Paris", dejeune: "non", animaux: "oui", basePrix: "760" },
+	{ pays: "ffff", dejeune: "oui", animaux: "non", basePrix: "890" },
+	{ pays: "dddd", dejeune: "non", animaux: "non", basePrix: "500" },
 
 ];
 
@@ -46,7 +92,7 @@ let destination = [
 
 
 
-window.onscroll = function() {  myFunction();};   /* Ajout sitcky ou non*/
+window.onscroll = function () { myFunction(); };   /* Ajout sitcky ou non*/
 
 // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
@@ -54,12 +100,12 @@ function myFunction() {
 	var header = document.getElementById('myTopnav');
 	// Get the offset position of the navbar
 	var sticky = myTopnav.offsetTop;
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
+	if (window.pageYOffset > sticky) {
+		header.classList.add("sticky");
 
-    } else {
-        header.classList.remove("sticky");
-    }
+	} else {
+		header.classList.remove("sticky");
+	}
 }
 
 
@@ -80,13 +126,13 @@ function sendMail() {
 
 
 //fonction de mise en place de l'ancre de retour en haut de page
-jQuery(function(){
+jQuery(function () {
 	$(function () {
 		$(window).scroll(function () {
-			if ($(this).scrollTop() > 100 ) { 
-				$('#ancre').css('right','4%');
-			} else { 
-				$('#ancre').css('right','-100px');
+			if ($(this).scrollTop() > 100) {
+				$('#ancre').css('right', '4%');
+			} else {
+				$('#ancre').css('right', '-100px');
 			}
 
 		});
@@ -95,17 +141,21 @@ jQuery(function(){
 
 
 
-function contact(){
+function contact() {
 	location.reload();
-} 
+}
 
+window.onmousemove = function(){
+	this.recapitulatif();
+}
 
 var onglet = document.querySelector("meta").getAttribute("name");
-window.onload = function(){
+window.onload = function () {
+
 
 	this.buildPage();
 
-	switch (this.onglet){
+	switch (this.onglet) {
 		case "Accueil":
 			document.getElementById("1a").classList.add("active");
 			break;
@@ -117,6 +167,9 @@ window.onload = function(){
 		case "Contact":
 			document.getElementById("3a").classList.add("active");
 			break;
+		case "Recapitulatif":
+			this.recapitulatif();
+			break;
 		default:
 			break;
 	}
@@ -124,52 +177,47 @@ window.onload = function(){
 }
 
 function scrollToTop(scrollDuration) {
-    var scrollStep = -window.scrollY / (scrollDuration / 15),
-        scrollInterval = setInterval(function(){
-        if ( window.scrollY != 0 ) {
-            window.scrollBy( 0, scrollStep );
-        }
-        else clearInterval(scrollInterval); 
-	},15);
+	var scrollStep = -window.scrollY / (scrollDuration / 15),
+		scrollInterval = setInterval(function () {
+			if (window.scrollY != 0) {
+				window.scrollBy(0, scrollStep);
+			}
+			else clearInterval(scrollInterval);
+		}, 15);
 	document.body.scrollTop = 0;
 }
 
 
-function fctTransfert(x){
+function fctTransfert(x) {
 	var id = x.id;
-	switch(id){
+	switch (id) {
 		case "A1":
-			window.location.href = "Reservation.html"+"?test=valeur1";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur1";
+			break;
 		case "A2":
-			window.location.href = "Reservation.html"+"?test=valeur2";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur2";
+			break;
 		case "A3":
-			window.location.href = "Reservation.html"+"?test=valeur3";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur3";
+			break;
 		case "A4":
-			window.location.href = "Reservation.html"+"?test=valeur4";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur4";
+			break;
 		case "A5":
-			window.location.href = "Reservation.html"+"?test=valeur5";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur5";
+			break;
 		case "A6":
-			window.location.href = "Reservation.html"+"?test=valeur6";
-		break;
+			window.location.href = "Reservation.html" + "?test=valeur6";
+			break;
 		default:
 			break;
 	}
-	
+
 }
 
 //--------------------------------------------------------------------------- Fonction de transfert du formulaire a la page récapitulatif
 
 
-function recapitulatif(){
-
-	window.location.href = "Contact.html";
-
-}
 
 
 
@@ -218,7 +266,7 @@ function getPrice() {
 		selectorDate[1].classList.remove('has-error');
 	}
 
-	return ("Prix total: " + parseInt(nbJours * ((nbEnfants + nbAdulte) * res_dejeuner * 12 ) + (Math.round((nbEnfants * 0.4 + nbAdulte) * basePrix) )) + " EUR");
+	return ("Prix total: " + parseInt(nbJours * ((nbEnfants + nbAdulte) * res_dejeuner * 12) + (Math.round((nbEnfants * 0.4 + nbAdulte) * basePrix))) + " EUR");
 }
 
 function calculateTotal() {
@@ -290,5 +338,7 @@ function verificateur(){
 	window.location.href = "Recapitulatif.html";
 }
 */
+
+
 
 

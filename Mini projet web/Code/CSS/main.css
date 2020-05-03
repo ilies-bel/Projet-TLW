@@ -9,6 +9,11 @@
   transform: translate(-50%, -50%);
 }
 
+.quiSN{
+  background-color: white;
+  color: #071017;
+  text-align: left;
+}
 /*----------------------------------------*/
 
 .wrapper {

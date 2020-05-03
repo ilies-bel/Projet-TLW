@@ -348,9 +348,11 @@ function recapitulatif() {
 	var datedepart;
 	var nbA;
 	var nbE;
-
 	var infos = location.search;
-	var teste = location.search;
+
+	
+
+
 	infos = decodeURI(infos);
 	infos = infos.split('&');
 
@@ -373,13 +375,17 @@ function recapitulatif() {
 
 	datearrivee = infos[7].split('=');
 	datearrivee = datearrivee[1].split('arrivee,');
+	//var startDt = new Date(document.getElementById("res_depart").value);
+
+	nbJours = Math.round( ( new Date(datearrivee) - new Date(datedepart) ) / (24 * 3600 * 1000)) ;
+	
+	
+	console.log(nbJours);
 
 
-	console.log(teste);
-
-
-
-	document.getElementById('paraRecap').innerHTML = 'Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.';
+	$("#paraRecap").append('Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.');
+	//document.getElementById('paraRecap').innerHTML = 'Merci de nous faire confiance ! Voici un récapitulatif de votre réservation.<br>Vous le recevrez également par mail.';
 	document.getElementById('paraRecap2').innerHTML = 'La réservation est au nom de : ' + nom.toString() + ' ' + prenom.toString() + '<br>pour ' + nbA + ' adulte(s) et ' + nbE + ' enfant(s),' + '<br>pour un depart le : ' + datedepart + '<br> et un retour le : ' + datearrivee;
+	
 	document.getElementById('paraRecap3').innerHTML = '<br> Veuillez-nous contacter pour toute autre question.';
 }

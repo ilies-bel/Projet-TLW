@@ -1,3 +1,16 @@
+.range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+}
+
+/*----------------------------------------*/
+
 .wrapper {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -20,7 +33,7 @@
   width: auto !important;
 }
 
-.formRecherche{
+.formRecherche {
   top: auto;
   background-color: rgb(253, 246, 234);
   width: 40%;
@@ -29,18 +42,17 @@
   padding-top: 0;
 }
 
-
 /*style de la page recapitulatif----------------------------------------------------------------------------------------------------*/
 
-.recap{
+.recap {
   text-align: center;
 }
 
-.recapmidpage{
+.recapmidpage {
   padding-top: 5%;
   padding-bottom: 5%;
-  background-image: url('../Ressources/img8.jpg') ;
-  color:black;
+  background-image: url('../Ressources/img8.jpg');
+  color: black;
   position: relative;
   top: 2%;
   bottom: 2%;
@@ -48,10 +60,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
-.recaptext{
+.recaptext {
   background-color: white;
   width: 40%;
   padding-top: 1%;
@@ -59,7 +70,6 @@
   left: 30%;
   position: relative;
 }
-
 
 /*style de la bar de navigation ----------------------------------------------------------------------------------------------------*/
 

@@ -265,10 +265,18 @@ function calculateTotal() {
 //------------------------------------------------------------------------recherche de destination page d'accueil
 
 function suppression(id) {
-
 	document.getElementById(id).parentElement.setAttribute("hidden", true);
 }
 
+
+function reset() {
+	document.getElementById("grille").setAttribute("hidden", true);
+	gridGen();
+	//window.scrollTo(0, 1000);
+
+	console.log("recommencer" );
+	//document.getElementById(id).parentElement.setAttribute("hidden", false);
+}
 
 function recherche() {
 	// récupération des variables
@@ -276,7 +284,8 @@ function recherche() {
 	var recherchePetitDejeuner = document.getElementById('recherchePetitDejeuner').checked || 0;
 	var rechercheAnimaux = document.getElementById('rechercheAnimaux').checked || 0;
 	var rechercheDate = new Date(document.getElementById("rechercheDate").value);
-	console.log("fonction lancé");
+	var recherchePrix = document.getElementById("recherchePrix").value;
+	console.log(recherchePrix);
 
 	fetch("http://127.0.0.1:5500/data.json")
 		.then(function (resp) {
@@ -284,21 +293,34 @@ function recherche() {
 				dest = data.destination;
 				console.log(dest);
 
+
+				//document.getElementById(v.idDestination).parentElement.setAttribute("hidden", false);
 				for (const v of dest) {
 
-					console.log(v.idDestination + " Fetch reussi");
+					if (v.dejeuner == "0") {
 
-					
-					if (recherchePetitDejeuner == 1 && v.dejeuner == "0") {
+						if (recherchePetitDejeuner == 1 ) {
+
+							suppression(v.idDestination);
+
+						}
+						else {
+							
+						}
+
+					}
+
+					if (recherchePrix > v.basePrix ) {
 						suppression(v.idDestination);
 					}
+
 					if (rechercheAnimaux == 1 && v.animaux == "0") {
 						suppression(v.idDestination);
 					}
-					if (rechercheDate == 1 && v.dejeuner == "0") {
+					if (rechercheDate >= new Date(v.prochaineDate)) {
 						suppression(v.idDestination);
 					}
-					
+
 
 					//this.document.getElementById("plan").classList.add("contenu1");
 

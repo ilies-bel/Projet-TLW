@@ -288,6 +288,7 @@ function recherche() {
 
 					console.log(v.idDestination + " Fetch reussi");
 
+					
 					if (recherchePetitDejeuner == 1 && v.dejeuner == "0") {
 						suppression(v.idDestination);
 					}
@@ -297,6 +298,7 @@ function recherche() {
 					if (rechercheDate == 1 && v.dejeuner == "0") {
 						suppression(v.idDestination);
 					}
+					
 
 					//this.document.getElementById("plan").classList.add("contenu1");
 

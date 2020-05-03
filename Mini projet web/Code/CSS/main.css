@@ -20,6 +20,15 @@
   width: auto !important;
 }
 
+.formRecherche{
+  top: auto;
+  background-color: rgb(253, 246, 234);
+  width: 40%;
+  left: 30%;
+  position: relative;
+  padding-top: 0;
+}
+
 
 /*style de la page recapitulatif----------------------------------------------------------------------------------------------------*/
 
